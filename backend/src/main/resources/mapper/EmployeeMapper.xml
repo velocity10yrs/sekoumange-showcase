@@ -1,0 +1,58 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<!DOCTYPE mapper
+        PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN"
+        "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+<mapper namespace="com.kaisha.SekouManagement.mapper.EmployeeMapper">
+    <!--  多条件查询emp(模糊查询)  -->
+    <select id="getPageByMulti" resultType="com.kaisha.SekouManagement.pojo.Employee">
+        select *
+        from employee
+        <where>
+            <if test="name!=null">
+                name like concat('%',#{name},'%')
+            </if>
+            <if test="gender!=null">
+                and gender=#{gender}
+            </if>
+                    <if test="beginTime!=null and endTime!=null">
+                        and entry_date between #{beginTime} and #{endTime}
+                    </if>
+        </where>
+        order by id asc
+    </select>
+
+    <!--  批量删除emp  -->
+    <delete id="deleteByMultiIds">
+        delete
+        from employee where id in
+        <foreach collection="ids" item="id" separator="," open="(" close=")">
+            #{id}
+        </foreach>
+    </delete>
+
+    <!--  修改emp(跟新增不同,允许诸多字段为空、所以需要逐一判空)  -->
+    <update id="updateEmp">
+        update emp
+        <set>
+            <if test="name!=null and name!='' " >
+                name=#{name}
+            </if>
+            <if test="department!=null and department!='' ">
+                department=#{department}
+            </if>
+            <if test=" occupation!=null and occupation!='' ">
+                occupation=#{occupation}
+            </if>
+            <if test=" profileIcon!=null and profileIcon!='' ">
+                profileIcon=#{profileIcon}
+            </if>
+            <if test=" age!=0 ">
+                age=#{age}
+            </if>
+            <if test=" gender=='f' or gender=='m' ">
+                gender=#{gender}
+            </if>
+        </set>
+        where id = #{id}
+    </update>
+</mapper>

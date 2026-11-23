@@ -1,0 +1,72 @@
+.box{
+    position: relative;
+    top:0em;
+    // height: 1024px;
+    padding-bottom: 5em;
+    background-color: rgba(255, 255, 255, 0.3);
+    .header{
+        align-items: baseline;
+        text-align: center;
+        color: #cea;
+        font-size: 1em;
+    }
+    .inputer{
+        align-items: baseline;
+        text-align: center;
+        margin:auto auto;
+        // display: grid;
+        // grid-template-columns: repeat(3,1fr);
+        // gap:1em;
+        input,button{
+            // width: 6em;
+            margin-top: 1em;
+            margin-left:.5em;
+            border-radius: 2em;
+        }
+    }
+    .table{
+        width: auto;
+        margin:100px auto;
+        padding: auto auto;
+        background-color: #fff;
+        border-radius: .6em;
+        th{
+            width: auto;//8em;
+            border-color: #fff;
+            background-color: #ace;
+            border-radius: .6em;
+            align-items: center;
+            text-align: left;
+            padding-left: 1em;
+        }
+        tr{
+            background-color: #ace;
+            color:#fff;
+            border-color: #fff;
+            border-radius: .6em;
+            align-items: center;
+        }
+        td{
+            width: auto;
+            background-color: #eee;
+            color:#999;
+            border-color: #fff;
+            border-radius: .6em;
+            align-items: center;
+            text-align: left;
+            padding-left: 1em;
+        }
+        .btnDanger{
+            border-color: #fff;
+            background-color: #eac !important;
+            width: auto;
+            padding: .2em;
+        }
+    }
+    form{
+        align-items: center;
+        text-align: center;
+        margin:2em auto;
+        width: 20em;
+    }
+}

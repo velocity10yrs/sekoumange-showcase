@@ -1,0 +1,27 @@
+.customed-cursor{
+    cursor:url("../public/Cursor_StoneAge.cur"),auto; 
+    // Cursor_StoneAge.cur
+}
+a:hover,html{
+    cursor:url("../public/Cursor_StoneAge.cur"),auto; 
+}
+body{
+    z-index:999;
+    position:absolute;
+    top:0;
+    bottom:0;
+    left:0;
+    right:0;
+    margin:0;
+    // width:720px;
+    // height: 1440px;
+    // background-color: #000;
+    //background-image:url('../public/stoneage.jpeg');
+    // opacity:0.5;
+    //background-size:cover;
+    // background-repeat: no-repeat;
+}
+#root{
+    height:100%;
+    cursor:url("../public/Cursor_StoneAge.cur"),auto; 
+}
