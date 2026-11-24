@@ -22,11 +22,9 @@ public class Employee {
     private String name;
     private int age;
     private Character gender;
-    private String department;
     private String occupation;
     private String profileIcon;
     private LocalDate entryDate;
-
-
+    private String departmentId;
 
 }
