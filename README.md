@@ -1,0 +1,3 @@
+该系统为前后端分离的web管理系统，以施工现场的DX化管理为主题开发。
+前端采用了javascript和react 18框架，AntV/ECharts等可视化图库。实现了MPA/表格/表单/轮播图/可视化图标等页面以及路由导航。
+后端采用了Java 22和springboot框架，以及MyBatis/lombok等插件。以及通过interceptor搭配JWT令牌实现了登录校验功能。
